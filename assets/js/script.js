@@ -6,7 +6,7 @@ $("#searchBtn").on("click", function() {
     $("#searchTerm").val("");
 
     // store api key
-    var apiKey = "&appid=afaa8eea1769b4359fd8e07b2efcefbd";
+    var apiKey = "b89976505f101fd43fcfe841c78ca5c3";
 
     // full url to call api
     var queryUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + apiKey;
@@ -38,13 +38,15 @@ $("#searchBtn").on("click", function() {
     let tempF = (response.main.temp - 273.15) * 1.80 + 32;
     tempF = Math.floor(tempF);
 
-    var cardBody = $(".card-body");
+    var cardBody = $("#current-city");
     var city = $("#cityName").text(response.name);
-    var temp = $("<p>").addClass("card-text").text("Temperature: " + tempF + " °F");
-    var humid = $("<p>").addClass("card-text").text("Humidity: " + response.main.humidity + "%");
-    var wind = $("<p>").addClass("card-text").text("Wind Speed: " + response.wind.speed + " MPH");
+    var temp = $("#currentTemp").text("Temperature: " + tempF + " °F");
+    var humid = $("#currentHumidity").text("Humidity: " + response.main.humidity + "%");
+    var wind = $("#currentWind").text("Wind Speed: " + response.wind.speed + " MPH");
+    var image = $("<img>").attr("src", "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png")
 
-    // add to page
+
+    city.append(image)
     cardBody.append(city, temp, humid, wind);
     $("#currentCity").append(card);
 
