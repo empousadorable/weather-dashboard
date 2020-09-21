@@ -4,10 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Weather Dashboard</title>
-</head>
-<body>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Weather Dashboard</title>
+      </head>
     
-    <script src="/weather-dashboard/assets/js/script.js"></script>
+      <body>
+        <div class="container-fluid">
+            <h1>Weather Dashboard</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="col-8">
+                        <div class="row">
+                                <div class="card">
+                                          <h2 class="card-title">City</h2>
+                                          <p id="temp" class="card-text">Temperature</p>
+                                          <p id="hum"class="card-text">Humidity</p>
+                                          <p id="wind"class="card-text">Wind Speed</p>
+                                          <p id="UV"class="card-text">UV Index</p>
+                                        </div>
+                                      </div>
+                                <div class="row">
+                                    <div class="card text-white bg-primary mb-3" style="max-width: 8rem; max-height: 11rem;">
+                                        <h5 class="card-title">Five-Day Forecast</h5>
+                                    <div class="card-body">
+                                        <p class="card-text">Five-Day Forecast Info</p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
