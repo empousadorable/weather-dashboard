@@ -1,5 +1,5 @@
 let city = $("#searchTerm").val();
-var apiKey = "f0e24f7c02617a3dc5849f2fb141d99f";
+var apiKey = "&appid=afaa8eea1769b4359fd8e07b2efcefbd";
 
 let date = new Date();
 
